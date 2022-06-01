@@ -18,6 +18,9 @@ struct PersistenceController {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
             newItem.name = "Test"
+
+            let newEntity = ModelEntity(context: viewContext)
+            newEntity.number = 111
         }
         do {
             try viewContext.save()
